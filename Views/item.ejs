@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=pageTitle %></title>
+</head>
+<body>
+  <h1> <%=pageHeader %> </h1>
+  <div>
+    <img src = <%=data.thumbnail %> width ="400" height="300" ><br><br>
+      Title  : <%= data.title %> <br>
+      Description : <%= data.description %> <br>
+      Price: <%= data.price %> <br>
+      Discount Percentage : <%= data.discountPercentage %> <br>
+      Rating : <%= data.rating %> <br>
+      Stock: <%= data.stock %> <br>
+      Brand : <%= data.brand %> <br>
+      Category : <%= data.category %> <br><br>
+      
+     
+      <% data.images.map((img)=>{ %>
+        <img src= "<%= img %>" width = "50" height = "50"> 
+      <% }) %>
+
+       <hr>
+    
+</div>
+</body>
+</html>
